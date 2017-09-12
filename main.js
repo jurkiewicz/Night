@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	function staring(i){
 		c.fillStyle = "#ffffff";
-		if (i < 0 && stan) return;
+		if (i < 0) return;
 		setTimeout(function(){
 			var x = Math.floor(Math.random()*window.innerWidth);
 	    	var y = Math.floor(Math.random()*window.innerHeight);
 	    	var w = Math.random()+0.1;
 	    	c.fillRect(x,y,w,w);
-	    	staring(i--);
+	    	staring(--i);
 		}, 5);
 	}
 	function errasing(){
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	canvas.onmouseover = function(){
 		if (canvas.getContext) {
-		    staring(1000);
+		    staring(4000);
 		}
 	}
 	canvas.onclick = function(){
